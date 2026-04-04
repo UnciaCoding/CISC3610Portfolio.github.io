@@ -1,4 +1,4 @@
-/*Jett (Hannah) McHugh Project 1 CSS document*/
+/*Jett (Hannah) McHugh CSS document*/
 body {
     background:#3D246C;
     color:#50009c;
@@ -19,7 +19,7 @@ h1 {
 }
 
 .box {
-    background:#FFDBC3;
+    background:#f3b2e9;
     color:#5C4B99;
     width:80%;
     height: 100%;

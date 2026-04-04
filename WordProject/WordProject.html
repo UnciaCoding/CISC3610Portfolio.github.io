@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="../css/active.css">
+	<title>Jett McHugh - Words Assignment</title>
+    <script src="./script.js"></script>
+</head>
+
+<body>
+    <div class="box">
+        <h1>Jett McHugh Word Assignment</h1>
+        <hr>
+        <br>
+        <div style="text-align: center;">
+            <select id="wordSelect" onchange="syncWord()">
+                <option value="">-- Choose a Word --</option>
+                <option value="Miami" data-temp="Miami">Miami</option>
+                <option value="Supercalifragilisticexpialidocious" data-temp="Supercalifragilisticexpialidocious">Supercalifragilisticexpialidocious</option>
+                <option value="Rural" data-temp="Rural">Rural</option>
+                <option value="Mischievous" data-temp="Mischievous">Mischievous</option>
+                <option value="Colonel" data-temp="Colonel">Colonel</option>
+                <option value="Epitome" data-temp="Epitome">Epitome</option>
+                <option value="Draught" data-temp="Draught">Draught</option>
+                <option value="Hyperbole" data-temp="Hyperbole">Hyperbole</option>
+            </select>
+            <input type="text" id="wordDisplay" readonly>
+            <button onclick="speakWord()">Speak Text</button>
+        </div>
+        <br>
+        <hr>
+        <h2>Text to Speech</h2>
+        <textarea id="text" rows="10" cols="50" placeholder="Enter your text here..."></textarea><br><br>
+        <button onclick="speakText()">Speak Text</button>
+        <div style="text-align: center;">
+            <img src="../images/Lotus_transparent.png" alt="Purple lotus" width="100">
+            <br>
+            <a href="../index.html">Return to home</a>
+        </div>
+    </div>
+</body>
+</html>
