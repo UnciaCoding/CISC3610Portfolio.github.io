@@ -1,14 +1,208 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<meta charset="utf-8"/>
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
-	<link rel="stylesheet" type="text/css" href="./css/active.css">
-    <title>Jett McHugh - YouTube Page</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YouTube Imbeds</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        /* Light mode colors */
+        [data-bs-theme="light"] {
+            --bs-body-bg: #f8ddff; /* Pale lavender background */
+            --bs-body-color: #000000; /* Black text */
+            /*--bs-primary: #87ceeb; /* Sky blue for buttons */
+            /*--bs-secondary: #b0c4de; /* Light steel blue for secondary */
+        }
+
+        /* Dark mode colors */
+        [data-bs-theme="dark"] {
+            --bs-body-bg: #2f1b3d; /* Deep gray-purple background */
+            --bs-body-color: #ffffff; /* White text */
+            /*--bs-primary: #add8e6; /* Light blue for buttons */
+            /*--bs-secondary: #778899; /* Light slate gray for secondary */
+        }
+
+        /* Navbar custom colors */
+        [data-bs-theme="light"] .navbar-light {
+            background-color: #edc6ff !important; /* Pale lavender for light navbar */
+            --bs-navbar-color: #000000;
+            --bs-navbar-brand-color: #000000;
+            --bs-nav-link-color: #000000;
+        }
+
+        [data-bs-theme="dark"] .navbar-dark {
+            background-color: #4b0082 !important; /* Deep purple for dark navbar */
+            --bs-navbar-color: #ffffff;
+            --bs-navbar-brand-color: #ffffff;
+            --bs-nav-link-color: #ffffff;
+        }
+        .btn-custom1 {
+            --bs-btn-bg: #0090c9; /* Sky blue */
+            --bs-btn-border-color: #0090c9;
+            --bs-btn-color: #000000;
+            --bs-btn-hover-bg: #00668e;
+            --bs-btn-hover-border-color: #00668e;
+        }
+        .btn-custom2 {
+            --bs-btn-bg: #e54fe7; /* Pink*/
+            --bs-btn-border-color: #e54fe7;
+            --bs-btn-color: #000000;
+            --bs-btn-hover-bg: #bc44be;
+            --bs-btn-hover-border-color: #bc44be;
+        }
+        [data-bs-theme="dark"] .btn-custom1 {
+            --bs-btn-bg: #add8e6; /* Light blue */
+            --bs-btn-border-color: #add8e6;
+            --bs-btn-color: #000000;
+            --bs-btn-hover-bg: #71b8d4;
+            --bs-btn-hover-border-color: #71b8d4;
+        }
+        [data-bs-theme="dark"] .btn-custom2 {
+            --bs-btn-bg: #f37ff5;
+            --bs-btn-border-color: #f37ff5;
+            --bs-btn-color: #000000;
+            --bs-btn-hover-bg: #fb95fd;
+            --bs-btn-hover-border-color: #fb95fd;
+        }
+    </style>
 </head>
 <body>
-    <h1>Jett McHugh YouTube Page</h1>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+            <a class="navbar-brand">Jett Youtube Imbeds Page</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="../index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../ResumePageHW/Resume.html">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="https://github.com/UnciaCoding?tab=repositories">Other Works</a>
+                    </li>
+                </ul>
+                <!-- Dark Mode Dropdown -->
+                <div class="dropdown">
+                    <button class="btn btn-custom2 dropdown-toggle" type="button" id="themeDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+                        <i class="bi bi-moon-fill"></i> Theme
+                    </button>
+                    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="themeDropdown">
+                        <li><a class="dropdown-item" href="#" id="lightTheme"><i class="bi bi-sun-fill"></i> Light Mode</a></li>
+                        <li><a class="dropdown-item" href="#" id="darkTheme"><i class="bi bi-moon-fill"></i> Dark Mode</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col-12">
+                <h1 class="text-center">Youtube Project Page</h1>
+                <p class="text-center">This is a collection of my favorite YouTube Video Essays. As each of these essays examines either a horror game, or a horror movie, they contain content that some may find disturbing. While these essays are excellent at breaking down themes, are well researched and incredibly informative, and many things about history or mythology that inspired these movies and games can be learned, it is advised you proceed with caution!</p>
+            </div>
+        </div>
+
+        <div class="card my-4 mx-auto">
+            <div class="card-body">
+                <h5 class="card-title">Why Mouthwashing Buries Its Own Story by nightmoire</h5>
+                <p class="card-text">Mouthwashing is a psychological horror released in September of 2024 to widespread success. Despite its older, 
+                    low-poly pixelated appearance, the game has received critical acclaim for its storyand atmosphere. The game centers around a 
+                    futuristic freight space ship called the Tulpar, owned by a company called Pony Express that is halfway through its over 
+                    year-long journey delivering cargo between planets. The Tulpar is one of the last remaining manned freight ships in the 
+                    industry, and boasts a crew of five - the captain Curly, the co-captain Jimmy, the mechanic Swansea, Swansea's apprentice 
+                    Daisuke, and the nurse Anya. The game centers around the collapsing dynamic of the crew after a crash with an asteroid renders 
+                    the ship unable to move, half the ship inaccessible, and Curly severely wounded and covered with burns, unable to speak, walk, 
+                    or lead, leaving Jimmy to suffer the responsibility of being captain, and the other crew members to contend with what it means 
+                    for a man like Jimmy to be in a position of power. nightmoire provides an intelligent, in depth deconstruction of the game's 
+                    narative and themes, as well as disections of each of the crew mates, their actions, and what lead to the situation becoming 
+                    as bad as it did, with a particular focus on Anya and her story, which so often gets overlooked, both in the game and in wider 
+                    discussion around the game.<br>
+                    TRIGGER WARNINGS FOR: Graphic depictions of violence, Suicide, Sexual Assault, Cannibalism
+                </p>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/_dhp_RawfWs?si=IvFTkooHG5OJ-hir" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+        </div>
+        <div class="card my-4 mx-auto">
+            <div class="card-body">
+                <h5 class="card-title">IRON LUNG: YOU DON'T GET TO HOPE by Fashionable Crow</h5>
+                <p class="card-text">Iron Lung (the Video Game) released in May 2022 on Windows. Like Mouthwashing above, it is a game with low graphical fidelity,
+                    using low poly models with low texture resolution. The game centers around a world in which an event known as the "Quiet Rapture" has occured, which has 
+                    spontaneously and without reason caused every single planet and star to vanish from the sky, leaving behind only the humans who lived on space stations as 
+                    survivors. All that remains are space stations, and the moons of the planets that vanished, several of which are filled with oceans of blood. The player 
+                    takes on the role of a prisoner who has been given the option to pilot a small submarine called the "SM-13" to explore one of these oceans of blood on a moon 
+                    known as AT-5, as a manner of serving their sentence and potentially earning their freedom. The gameplay consists of the player navigating the floor of this ocean of blood, before
+                    eventually being eaten by a giant fish, ending the game. There is no way for the player to truly earn their freedom - every playthrough results in death. A popular YouTuber by the name 
+                    of Markiplier played Iron Lung on his channel in May the same year it released, and shortly after, reached out to the game's creator to offer to make a movie together based on the game.
+                    Iron Lung (the Movie) released in theaters in January of 2026, to resounding, record breaking success for an indie horror movie, as it was entirely funded, directed, and produced by Markiplier. 
+                    Fashionable Crow's video essay on the game and movie provides an in depth analysis of the themes of the game, and how they are translated to the movie, 
+                    as well as providing an extremely insightful commentary on the different tone that the Iron Lung Movie's ending takes when compared to the Iron Lung Game, being 
+                    significantly more hopeful. 
+                    <br>
+                    TRIGGER WARNINGS FOR: Psychological horror, cosmic horror, Excessive amounts of blood. I mean, an extreme amount, the game and movie both take place almost entirely in the bottom of an ocean of blood.
+                </p>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/N4eD1iz6MAQ?si=f5PR1tx9hBg9llwc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>            </div>
+        </div>
+        <div class="card my-4 mx-auto">
+            <div class="card-body">
+                <h5 class="card-title">The Witch - The Complete Guide (Everything Explained) by Novum</h5>
+                <p class="card-text">The Witch, or the VVitch, as lovingly referred to by fans, is a horror movie released in 2015, by aclaimed director Robert Eggers. While initially upon release, the film received positively-skewed
+                    mixed reviews, the film has become something of a cult classic in the years following its release, regarded as "one of the greats" of modern horror, alongside movies like Hereditary and Midsommar. The film centers 
+                    around a family of Puritans in the 1600s just before the hight of the witch trials, who are banished from their village due to the Patriarch's staunchly religious beliefs clashing with those of the village leaders.
+                    The family settle on land at the edge of the forest unaware that it is cursed, and that a witch lives in the woods. The movie follows the family as they are slowly torn apart by the witch's influence, 
+                    and the paranois and mistrust that grows between them as they begin to accuse each other of being witches, in line with Satan himself. Most of these accusations are lodged against Thomasin, the eldest daughter and main 
+                    character, played by Anya Taylor-Joy. The movie ends with Thomasin joining the witch in the woods following the death of her entire family. Novum's video essay covers this movie in extreme, meticulous detail, from the 
+                    actors' performances, to cinematography, to the set, to the costuming, to the historical context of the movie, to the symbolism at play between scenes. He provides in depth history lessons about the real life witch trials,
+                    the women accused, those who died, and what led society into such a paranoid state that family members turned on family member, and uses that context to explain what we witness in the movie, including why Thomasin was 
+                    ultimately doomed to join the witch from the moment her family left the village. 
+                    <br>
+                    TRIGGER WARNINGS FOR: Nudity, Child murder, Religious horror
+                </p>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/kEYgVnKUiRY?si=NCcuN-W3_4dx9NyT" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>            </div>
+        </div>
+    </div>
+    <script>
+        // Dark mode functionality
+        const lightThemeBtn = document.getElementById('lightTheme');
+        const darkThemeBtn = document.getElementById('darkTheme');
+        const html = document.documentElement;
+        const navbar = document.querySelector('.navbar');
+
+        // Check for saved theme preference
+        const currentTheme = localStorage.getItem('theme') || 'light';
+        setTheme(currentTheme);
+
+        lightThemeBtn.addEventListener('click', (e) => {
+            e.preventDefault();
+            setTheme('light');
+            localStorage.setItem('theme', 'light');
+        });
+
+        darkThemeBtn.addEventListener('click', (e) => {
+            e.preventDefault();
+            setTheme('dark');
+            localStorage.setItem('theme', 'dark');
+        });
+
+        function setTheme(theme) {
+            html.setAttribute('data-bs-theme', theme);
+
+            // Update navbar classes
+            if (theme === 'dark') {
+                navbar.classList.remove('navbar-light', 'bg-light');
+                navbar.classList.add('navbar-dark', 'bg-dark');
+            } else {
+                navbar.classList.remove('navbar-dark', 'bg-dark');
+                navbar.classList.add('navbar-light', 'bg-light');
+            }
+        }
+    </script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
 </body>
 </html>
