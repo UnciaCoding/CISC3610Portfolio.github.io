@@ -1,0 +1,795 @@
+<!--Accessibility Education PWA-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A11y Learn Homepage</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="manifest" href="manifest.json">
+    <link rel="apple-touch-icon" href="images/logo_192.png">
+    <meta name="theme-color" content="#0d6efd">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Skip to main content link for keyboard navigation -->
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+    
+    <!-- Navigation -->
+     <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+            <a class="navbar-brand fw-bold">
+                <span aria-hidden="true">♿</span> A11y Learn
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto">
+                    <!-- CHANGE THESE ITEMS TO PAGES WITHIN THE SITE -->
+                    <li class="nav-item">
+                        <a class="nav-link active" href="PWAProject_Homepage.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="https://unciacoding.github.io/CISC3610Portfolio.github.io/index.html">Return to Portfolio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="https://github.com/UnciaCoding?tab=repositories">GitHub</a>
+                    </li>
+                </ul>
+                <!-- Dark Mode Dropdown -->
+                <div class="dropdown">
+                    <button class="btn btn-custom2 dropdown-toggle" type="button" id="themeDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+                        <i class="bi bi-moon-fill"></i> Theme
+                    </button>
+                    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="themeDropdown">
+                        <li><a class="dropdown-item" href="#" id="lightTheme"><i class="bi bi-sun-fill"></i> Light Mode</a></li>
+                        <li><a class="dropdown-item" href="#" id="darkTheme"><i class="bi bi-moon-fill"></i> Dark Mode</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
+    
+    <!-- Header -->
+    <header class="header-section">
+        <div class="container">
+            <img src="images/Disability_Logo.png" alt="Wheelchair disability logo" class="image-fluid float-end ms-3" width="100">
+            <h1>Welcome to A11y Learn</h1>
+            <p class="mb-0">Master accessibility in software development. Learn how to create inclusive digital experiences for everyone.</p>
+        </div>
+    </header>
+    
+    <!-- Main content -->
+    <main id="main-content" class="container py-4">
+        
+        <!-- Tab Navigation -->
+        <ul class="nav nav-tabs mb-4" role="tablist">
+            <li class="nav-item" role="presentation">
+                <button class="nav-link active" id="basics-tab" data-bs-toggle="tab" data-bs-target="#basics" type="button" role="tab" aria-controls="basics" aria-selected="true">Basics</button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button class="nav-link" id="features-tab" data-bs-toggle="tab" data-bs-target="#features" type="button" role="tab" aria-controls="features" aria-selected="false">Features</button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button class="nav-link" id="wcag-tab" data-bs-toggle="tab" data-bs-target="#wcag" type="button" role="tab" aria-controls="wcag" aria-selected="false">WCAG Guidelines</button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button class="nav-link" id="testing-tab" data-bs-toggle="tab" data-bs-target="#testing" type="button" role="tab" aria-controls="testing" aria-selected="false">Testing Tools</button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button class="nav-link" id="quiz-tab" data-bs-toggle="tab" data-bs-target="#quiz" type="button" role="tab" aria-controls="quiz" aria-selected="false">Quiz</button>
+            </li>
+        </ul>
+        
+        <!-- Tab Content -->
+        <div class="tab-content">
+            
+            <!-- Basics Tab, where the basics of Accessibility and Disability are covered-->
+            <div class="tab-pane fade show active" id="basics" role="tabpanel" aria-labelledby="basics-tab">
+                <div class="row">
+                    <div class="col-lg-8">
+                        <div class="card topic-card">
+                            <div class="card-header">
+                                <h2 class="mb-0">Disability as A Human Experience</h2>
+                            </div>
+                            <div class="card-body">
+                                <p>"Disability" refers to any condition of the body or mind that impairs function, and makes it more difficult for the person to do certain activities and interact with the world around them. When one thinks of disability, the image conjured is often a non-ambulatory person confined to a wheelchair, unable to walk. It is an image that is external to the self, something that happened to another, but cannot happen to the self. 
+                                    However, disability can take many forms, many appearances, and can occur in many stages. It can occur at any point, at any age, can be permanent or temporary, can be visible or invisible. It can be the result of an accident, illness, or a natural part of aging. It can be physical, sensory, cognitive, or emotional.
+                                    A pregant woman, a person with a broken arm or a sprained ankle, or someone leaving the eye doctor with dilated pupils, are all disabled just as a person with a chronic illness, a person with a mobility impairment, or a person with a sensory impairment is disabled. The only differences are that the former examples are temporary, and the later are permanent, and all have varying levels of impact upon life.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="card topic-card">
+                            <div class="card-header">
+                                <h2 class="mb-0">Models of How Disability is Viewed in Society</h2>
+                            </div>
+                            <div class="card-body">
+                                <p><strong>The Medical Model of Disability</strong> places the burden and responsibility on the person with a disability. The person is the problem or owns the problem. The Medical Model of Disability is harsh. It uses keywords such as ‘abnormality’, ‘lack of ability’ and ‘disadvantage’ to describe a person. The Medical Model of Disability applies the medical world’s view that one needs cures or fixes to be a normal functioning person.
+                                </p>
+                                <img src="images/Medical_Model.png" class="img-fluid rounded mx-auto d-block" alt="Image showing the Medical Model of Disability. The Disabled individual says 'help, I need access, I cannot use this, I have difficulty.' Society responds with 'You are the problem. You lack ability. You are abnormal. You need to be fixed.'">
+                                <p>Such a harsh view can isolate, stigmatize, and discriminate. <br>
+                                    <strong>The Social Model of Disability</strong>  does not place the burden and responsibility on the person with a disability. Instead, this model describes disability as a consequence of environmental, social and attitudinal barriers. Instead of fixing or curing a person with disabilities, it is up to society to remove barriers so as to improve his or her life. Hence, this model provides a deeper understanding and acceptance of people with disabilities.
+                                    <br>Both in the physical world, and in the digital world, society must strive to ensure that the world is as accessible as possible to those with impairments that may affect how they interact with said world.
+                                </p>
+                                <img src="images/Social_Model.png" class="img-fluid rounded mx-auto d-block" alt="Image showing the Social Model of Disability. The disabled individual says 'help, I need access, I cannot use this, I have difficulty.' Society responds with 'We will remove attitudinal barriers, environmental barriers, and provide multiple solutions for you and everyone.'">
+                                <p> Source for this information: <a href="https://ixdf.org/literature/article/understand-the-social-needs-for-accessibility-in-ux-design" target="_blank">Understand the Social Needs for Accessibility in UX Design by Ruby Zheng</a></p>
+                            </div>
+                        </div>
+                        <div class="card topic-card">
+                            <div class="card-header">
+                                <h2 class="mb-0">What is Web Accessibility?</h2>
+                            </div>
+                            <div class="card-body">
+                                <p>Web accessibility means ensuring that websites and applications are usable by everyone, including people with disabilities. This includes people with:</p>
+                                <ul>
+                                    <li><strong>Visual impairments:</strong> Blindness, low vision, color blindness</li>
+                                    <li><strong>Hearing impairments:</strong> Deafness, hard of hearing</li>
+                                    <li><strong>Motor impairments:</strong> Limited mobility, tremors, lack of fine motor control</li>
+                                    <li><strong>Cognitive impairments:</strong> Learning disabilities, dyslexia, cognitive disabilities</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="card topic-card">
+                            <div class="card-header">
+                                <h2 class="mb-0">The Law for Accessibility</h2>
+                            </div>
+                            <div class="card-body">
+                                <p><strong>Americans with Disabilities Act, 1990</strong> prohibits discrimination on the basis of disability in employment, programs and services provided by state and local governments, goods and services provided by private companies, and in commercial facilities</p>
+                                <p><strong>U.S. Department of Justice, 1996</strong> upheld that entities covered by the ADA must also ensure that all avenues of communication are accessible to individuals with disabilities, including websites and apps, thus extending the ADA to include software.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="card-title">Quick Facts</h5>
+                                <ul class="small">
+                                    <li>15% of the world's population has some form of disability</li>
+                                    <li>Accessibility benefits everyone, not just people with disabilities</li>
+                                    <li>Accessible websites perform better in search engines</li>
+                                    <li>Legal compliance is important (ADA, GDPR, etc.)</li>
+                                </ul>
+                            </div>
+                        </div>
+                        
+                        <div class="card mt-3">
+                            <div class="card-body">
+                                <h5 class="card-title">Why It Matters</h5>
+                                <p class="small">Creating accessible software isn't just the right thing to do—it's good business practice. Accessible design benefits:</p>
+                                <ul class="small">
+                                    <li>Older adults</li>
+                                    <li>People on mobile devices</li>
+                                    <li>People in noisy environments</li>
+                                    <li>People with temporary injuries</li>
+                                </ul>
+                                <p><strong>Accessibility benefits everyone.</strong></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Features Tab, where features of Accessibility to be included in software are covered -->
+            <div class="tab-pane fade" id="features" role="tabpanel" aria-labelledby="features-tab">
+                <div class="row">
+                    <div class="col-lg-8">
+                        <div class="card topic-card">
+                            <div class="card-header">
+                                <h2 class="mb-0">Semantic HTML</h2>
+                            </div>
+                            <div class="card-body">
+                                <p>Using semantic HTML elements helps assistive technologies such as screen readers understand the structure and meaning of your content.</p>
+                                
+                                <div class="example-section good-example">
+                                    <strong>✓ Good Example:</strong>
+                                    <pre><code>&lt;header&gt;
+  &lt;nav&gt;...&lt;/nav&gt;
+&lt;/header&gt;
+&lt;main&gt;
+  &lt;article&gt;
+    &lt;h1&gt;Article Title&lt;/h1&gt;
+    &lt;p&gt;Content here...&lt;/p&gt;
+  &lt;/article&gt;
+&lt;/main&gt;
+&lt;footer&gt;...&lt;/footer&gt;</code></pre>
+                                </div>
+                                
+                                <div class="example-section bad-example">
+                                    <strong>✗ Bad Example:</strong>
+                                    <pre><code>&lt;div class="header"&gt;
+  &lt;div class="nav"&gt;...&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="content"&gt;
+  &lt;div class="article"&gt;
+    &lt;div class="title"&gt;Article Title&lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="card topic-card">
+                            <div class="card-header">
+                                <h2 class="mb-0">Color Contrast</h2>
+                            </div>
+                            <div class="card-body">
+                                <p>Sufficient color contrast ensures text is readable for people with low vision and color blindness.</p>
+                                
+                                <p><strong>WCAG Standards:</strong></p>
+                                <ul>
+                                    <li><strong>Level AA:</strong> 4.5:1 contrast ratio for normal text</li>
+                                    <li><strong>Level AAA:</strong> 7:1 contrast ratio for normal text</li>
+                                </ul>
+                                
+                                <div class="mt-3">
+                                    <div class="contrast-demo good-contrast">
+                                        <strong>Good Contrast:</strong> Dark text on light background (21:1 ratio)
+                                    </div>
+                                    <div class="contrast-demo bad-contrast">
+                                        <strong>Bad Contrast:</strong> Light text on light background (1.3:1 ratio)
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="card topic-card">
+                            <div class="card-header">
+                                <h2 class="mb-0">Do Not Use Colors Alone</h2>
+                            </div>
+                            <div class="card-body">
+                                <p>Color alone for feedback is insufficient for accessibility, as those with colorblindness may not perceive the color difference and may not be able to accurately read the feedback.</p>
+                                <div class="example-section good-example">
+                                    <strong>✓ Good Example:</strong>
+                                    <div style="color: var(--correct-color)">✓ Question 10: Sweet Tea</div>
+                                    <div style="color: var(--incorrect-color)">✗ Question 10: Sweet Tea</div>
+                                    <div style="color: var(--correct-color)">Correct! Question 10: Sweet Tea</div>
+                                    <div style="color: var(--incorrect-color)">Incorrect. Question 10: Sweet Tea</div>
+                                </div>
+                                
+                                <div class="example-section bad-example">
+                                    <strong>✗ Bad Example:</strong>
+                                    <div style="color: var(--correct-color)">Question 10: Sweet Tea</div>
+                                    <div style="color: var(--incorrect-color)">Question 10: Sweet Tea</div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="card topic-card">
+                            <div class="card-header">
+                                <h2 class="mb-0">Alt Text for Images</h2>
+                            </div>
+                            <div class="card-body">
+                                <p>Alternative text describes images for screen reader users and appears when images fail to load.</p>
+                                
+                                <div class="example-section good-example">
+                                    <strong>✓ Good Example:</strong>
+                                    <pre><code>&lt;img src="sunset.jpg" alt="A colorful sunset over the ocean with pink and orange clouds"&gt;</code></pre>
+                                </div>
+                                
+                                <div class="example-section bad-example">
+                                    <strong>✗ Bad Example:</strong>
+                                    <pre><code>&lt;img src="sunset.jpg" alt="image"&gt;
+&lt;img src="sunset.jpg" alt=""&gt;
+&lt;img src="sunset.jpg"&gt;</code></pre>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card topic-card">
+                            <div class="card-header">
+                                <h2 class="mb-0">Videos Should Use Captions</h2>
+                            </div>
+                            <div class="card-body">
+                                <p>Providing captions for videos ensures that users who are deaf or hard of hearing, or who do not have English as their first language, can access and follow along with audio content. Auto-generated captions can be helpful, but they may not always be accurate,
+                                    so it's important to review and edit them when possible to ensure they are helpful and accurate.</p>
+                                
+                            </div>
+                        </div>
+                        
+                    </div>
+                    
+                    <div class="col-lg-4">
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="card-title">The Myth of the Minority User</h5>
+                                <p class="small"><strong>The Myth of the Minority User</strong> is a common fallacy in tech and design, where product developers mistakenly categorize people with disabilities or specific accessibility needs as an "edge case" or an isolated minority. In reality, individuals with disabilities represent a massive, diverse user base that directly benefits all users when accommodated.</p>
+                                <p class="small"> Anywhere between 1 in 5 and 1 in 7 people in the US have a disability. The 2012 Census Bureau study found that in the US there are 57.6m disabled people, 8.1 million of which were visually impaired. For comparrison, that is almost the same numbeber of people as there were residents in New York City in the same year!</p>
+                            </div>
+                        </div>
+                        
+                        <div class="card mt-3">
+                            <div class="card-body">
+                                <h5 class="card-title">The Curb Cut Effect</h5>
+                                <p class="small"><strong>The Curb Cut Effect</strong> refers to the idea that accessibility improvements for people with disabilities often benefit everyone else as well. For example, curb cuts designed for wheelchair users also help parents with strollers, cyclists, individuals with canes or rollators, and the elderly.</p>
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>    
+
+            <!-- WCAG Tab -->
+            <div class="tab-pane fade" id="wcag" role="tabpanel" aria-labelledby="wcag-tab">
+                <div class="row">
+                    <div class="col-lg-8">
+                        
+                        <div class="card topic-card">
+                            <div class="card-header">
+                                <h2 class="mb-0">WCAG 2.1 Guidelines</h2>
+                            </div>
+                            <div class="card-body">
+                                <p><a href="https://www.w3.org/TR/WCAG20/" target="_blank" rel="noopener noreferrer">The Web Content Accessibility Guidelines (WCAG)</a> are the international standards for web accessibility. They are organized around four principles:</p>
+                                
+                                <h5 class="mt-3">1. Perceivable</h5>
+                                <p>Information and user interface components must be presentable to users in ways they can perceive. Examples:</p>
+                                <ul>
+                                    <li>Provide text alternatives for images</li>
+                                    <li>Provide captions for videos</li>
+                                    <li>Ensure sufficient color contrast</li>
+                                    <li>Make content readable and understandable</li>
+                                </ul>
+                                
+                                <h5 class="mt-3">2. Operable</h5>
+                                <p>User interface components and navigation must be operable. Examples:</p>
+                                <ul>
+                                    <li>Make all functionality keyboard accessible</li>
+                                    <li>Avoid content that causes seizures</li>
+                                    <li>Provide ways to help users navigate and find content</li>
+                                    <li>Avoid timed responses</li>
+                                </ul>
+                                
+                                <h5 class="mt-3">3. Understandable</h5>
+                                <p>Information and user interface operation must be understandable. Examples:</p>
+                                <ul>
+                                    <li>Make text readable and understandable</li>
+                                    <li>Make pages appear and operate in predictable ways</li>
+                                    <li>Help users avoid and correct mistakes</li>
+                                    <li>Use clear labels and instructions</li>
+                                </ul>
+                                
+                                <h5 class="mt-3">4. Robust</h5>
+                                <p>Content must be robust enough to be interpreted reliably by assistive technologies. Examples:</p>
+                                <ul>
+                                    <li>Use valid HTML</li>
+                                    <li>Use proper ARIA attributes</li>
+                                    <li>Ensure compatibility with assistive technologies</li>
+                                    <li>Test with real assistive technologies</li>
+                                </ul>
+                            </div>
+                        </div>
+                        
+                        <div class="card topic-card">
+                            <div class="card-header">
+                                <h2 class="mb-0">Keyboard Navigation</h2>
+                            </div>
+                            <div class="card-body">
+                                <p>Not everyone can use a mouse. Ensure all functionality is accessible via keyboard.</p>
+                                
+                                <div class="example-section good-example">
+                                    <strong>✓ Good Example:</strong>
+                                    <pre><code>&lt;button type="button" 
+        onclick="handleClick()"&gt;
+  Click Me
+&lt;/button&gt;
+
+&lt;a href="/page" 
+   tabindex="0" 
+   role="button"
+   onkeypress="handleKeyPress(event)"&gt;
+  Link Button
+&lt;/a&gt;</code></pre>
+                                </div>
+                                
+                                <h6 class="mt-3">Tips:</h6>
+                                <ul>
+                                    <li>Use semantic HTML buttons and links</li>
+                                    <li>Ensure focus indicators are visible</li>
+                                    <li>Manage tab order with <code>tabindex</code></li>
+                                    <li>Handle both click and keyboard events</li>
+                                </ul>
+                            </div>
+                        </div>
+                        
+                        <div class="card topic-card">
+                            <div class="card-header">
+                                <h2 class="mb-0">Form Accessibility</h2>
+                            </div>
+                            <div class="card-body">
+                                <p>Accessible forms help all users complete tasks accurately.</p>
+                                
+                                <div class="example-section good-example">
+                                    <strong>✓ Good Example:</strong>
+                                    <pre><code>&lt;label for="email"&gt;
+  Email Address:
+&lt;/label&gt;
+&lt;input type="email" 
+       id="email" 
+       name="email"
+       aria-describedby="email-help"
+       required&gt;
+&lt;small id="email-help"&gt;
+  We'll never share your email
+&lt;/small&gt;</code></pre>
+                                </div>
+                                
+                                <h6 class="mt-3">Best Practices:</h6>
+                                <ul>
+                                    <li>Always use <code>&lt;label&gt;</code> elements</li>
+                                    <li>Associate labels with inputs using <code>for</code> attribute</li>
+                                    <li>Use appropriate input types</li>
+                                    <li>Provide clear error messages</li>
+                                    <li>Use ARIA attributes when needed</li>
+                                </ul>
+                            </div>
+                        </div>
+                        
+                    </div>
+                    
+                    <div class="col-lg-4">
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="card-title">Conformance Levels</h5>
+                                <p class="small"><strong>Level A:</strong> Basic accessibility features</p>
+                                <p class="small"><strong>Level AA:</strong> Enhanced accessibility (recommended)</p>
+                                <p class="small"><strong>Level AAA:</strong> Enhanced accessibility (specialized)</p>
+                                <p class="small mb-0">Most organizations aim for WCAG 2.1 Level AA compliance.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="card mt-3">
+                            <div class="card-body">
+                                <h5 class="card-title">ARIA Overview</h5>
+                                <p class="small">ARIA (Accessible Rich Internet Applications) provides additional semantics for interactive components.</p>
+                                <ul class="small">
+                                    <li><code>aria-label</code></li>
+                                    <li><code>aria-labelledby</code></li>
+                                    <li><code>aria-describedby</code></li>
+                                    <li><code>role</code></li>
+                                    <li><code>aria-expanded</code></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Testing Tab -->
+            <div class="tab-pane fade" id="testing" role="tabpanel" aria-labelledby="testing-tab">
+                <div class="row">
+                    <div class="col-lg-8">
+                        
+                        <div class="card topic-card">
+                            <div class="card-header">
+                                <h2 class="mb-0">Accessibility Testing Tools</h2>
+                            </div>
+                            <div class="card-body">
+                                <p>Use these tools to test and improve your website's accessibility:</p>
+                                
+                                <div class="mt-3">
+                                    <h5>Automated Tools</h5>
+                                    <div class="list-group mb-3">
+                                        <div class="list-group-item">
+                                            <h6 class="mb-2"><strong><a href="https://axe.devtools.org/" target="_blank" rel="noopener noreferrer">Axe DevTools</a></strong></h6>
+                                            <p class="small mb-0">Browser extension for automated accessibility testing. Great for catching common issues.</p>
+                                        </div>
+                                        <div class="list-group-item">
+                                            <h6 class="mb-2"><strong><a href="https://wave.webaim.org/" target="_blank" rel="noopener noreferrer">WAVE</a></strong></h6>
+                                            <p class="small mb-0">Web accessibility evaluation tool. Provides visual feedback about accessibility issues.</p>
+                                        </div>
+                                        <div class="list-group-item">
+                                            <h6 class="mb-2"><strong><a href="https://developer.chrome.com/docs/lighthouse/overview/" target="_blank" rel="noopener noreferrer">Lighthouse</a></strong></h6>
+                                            <p class="small mb-0">Built into Chrome DevTools. Includes accessibility audits alongside performance metrics.</p>
+                                        </div>
+                                        <div class="list-group-item">
+                                            <h6 class="mb-2"><strong><a href="https://webaim.org/resources/contrastchecker/" target="_blank" rel="noopener noreferrer">WebAIM Contrast Checker</a></strong></h6>
+                                            <p class="small mb-0">Check color contrast ratios to ensure WCAG compliance.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="mt-3">
+                                    <h5>Manual Testing</h5>
+                                    <ul>
+                                        <li><strong>Keyboard Navigation:</strong> Test using only Tab, Enter, and arrow keys</li>
+                                        <li><strong>Screen Reader Testing:</strong> Use <a href="https://www.nvaccess.org/" target="_blank" rel="noopener noreferrer">NVDA</a> (free), <a href="https://www.freedomscientific.com/products/software/jaws/" target="_blank" rel="noopener noreferrer">JAWS</a>, or built-in screen readers</li>
+                                        <li><strong>Mobile Testing:</strong> Test with mobile accessibility features enabled</li>
+                                        <li><strong>Color Blindness:</strong> Use simulation tools or test with color blind users</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="card topic-card">
+                            <div class="card-header">
+                                <h2 class="mb-0">Testing Checklist</h2>
+                            </div>
+                            <div class="card-body">
+                                <form>
+                                    <div class="checkbox-item">
+                                        <input type="checkbox" id="check1" name="check1">
+                                        <label for="check1">All images have descriptive alt text</label>
+                                    </div>
+                                    <div class="checkbox-item">
+                                        <input type="checkbox" id="check2" name="check2">
+                                        <label for="check2">All functionality is keyboard accessible</label>
+                                    </div>
+                                    <div class="checkbox-item">
+                                        <input type="checkbox" id="check3" name="check3">
+                                        <label for="check3">Color contrast meets WCAG AA standards</label>
+                                    </div>
+                                    <div class="checkbox-item">
+                                        <input type="checkbox" id="check4" name="check4">
+                                        <label for="check4">Form fields have associated labels</label>
+                                    </div>
+                                    <div class="checkbox-item">
+                                        <input type="checkbox" id="check5" name="check5">
+                                        <label for="check5">Headings are structured logically (h1, h2, h3, etc.)</label>
+                                    </div>
+                                    <div class="checkbox-item">
+                                        <input type="checkbox" id="check6" name="check6">
+                                        <label for="check6">Focus indicators are visible</label>
+                                    </div>
+                                    <div class="checkbox-item">
+                                        <input type="checkbox" id="check7" name="check7">
+                                        <label for="check7">Video content has captions</label>
+                                    </div>
+                                    <div class="checkbox-item">
+                                        <input type="checkbox" id="check8" name="check8">
+                                        <label for="check8">HTML is semantic and valid</label>
+                                    </div>
+                                    <div class="checkbox-item">
+                                        <input type="checkbox" id="check10" name="check10">
+                                        <label for="check10">Screen reader testing completed</label>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                        
+                    </div>
+                    
+                    <div class="col-lg-4">
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="card-title">Browser Extensions</h5>
+                                <p class="small mb-1"><strong>For Chrome:</strong></p>
+                                <ul class="small">
+                                    <li>axe DevTools</li>
+                                    <li>WAVE</li>
+                                    <li>Lighthouse</li>
+                                </ul>
+                                <p class="small mb-1 mt-2"><strong>For Firefox:</strong></p>
+                                <ul class="small">
+                                    <li>axe DevTools</li>
+                                    <li>WAVE</li>
+                                </ul>
+                            </div>
+                        </div>
+                        
+                        <div class="card mt-3">
+                            <div class="card-body">
+                                <h5 class="card-title">Assistive Technologies</h5>
+                                <p class="small mb-1"><strong>Screen Readers:</strong></p>
+                                <ul class="small">
+                                    <li>NVDA (free, Windows)</li>
+                                    <li>JAWS (paid, Windows)</li>
+                                    <li>VoiceOver (built-in, macOS/iOS)</li>
+                                </ul>
+                                <p class="small mb-1 mt-2"><strong>Magnification:</strong></p>
+                                <ul class="small">
+                                    <li>Browser zoom (all browsers)</li>
+                                    <li>Operating system magnification</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Quiz Tab -->
+            <div class="tab-pane fade" id="quiz" role="tabpanel" aria-labelledby="quiz-tab">
+                <div class="row">
+                    <div class="col-lg-8">
+                        
+                        <div class="alert alert-info" role="alert">
+                            <strong>Test Your Knowledge!</strong> Answer these questions to check your understanding of web accessibility.
+                        </div>
+                        
+                        <div class="quiz-question">
+                            <h5>Question 1: What does "A11y" mean?</h5>
+                            <div class="quiz-option">
+                                <input type="radio" id="q1a" name="q1" value="a">
+                                <label for="q1a">Accessibility (A + 11 letters + y)</label>
+                            </div>
+                            <div class="quiz-option">
+                                <input type="radio" id="q1b" name="q1" value="b">
+                                <label for="q1b">Application Intelligence</label>
+                            </div>
+                            <div class="quiz-option">
+                                <input type="radio" id="q1c" name="q1" value="c">
+                                <label for="q1c">Advanced Automation</label>
+                            </div>
+                            <button type="button" class="btn btn-sm btn-primary mt-2" onclick="checkAnswer('q1', 'a')">Check Answer</button>
+                        </div>
+                        
+                        <div class="quiz-question">
+                            <h5>Question 2: Which of the following is NOT one of the WCAG four principles?</h5>
+                            <div class="quiz-option">
+                                <input type="radio" id="q2a" name="q2" value="a">
+                                <label for="q2a">Perceivable</label>
+                            </div>
+                            <div class="quiz-option">
+                                <input type="radio" id="q2b" name="q2" value="b">
+                                <label for="q2b">Operable</label>
+                            </div>
+                            <div class="quiz-option">
+                                <input type="radio" id="q2c" name="q2" value="c">
+                                <label for="q2c">Profitable</label>
+                            </div>
+                            <button type="button" class="btn btn-sm btn-primary mt-2" onclick="checkAnswer('q2', 'c')">Check Answer</button>
+                        </div>
+                        
+                        <div class="quiz-question">
+                            <h5>Question 3: What is the minimum contrast ratio for normal text under WCAG AA?</h5>
+                            <div class="quiz-option">
+                                <input type="radio" id="q3a" name="q3" value="a">
+                                <label for="q3a">2:1</label>
+                            </div>
+                            <div class="quiz-option">
+                                <input type="radio" id="q3b" name="q3" value="b">
+                                <label for="q3b">4.5:1</label>
+                            </div>
+                            <div class="quiz-option">
+                                <input type="radio" id="q3c" name="q3" value="c">
+                                <label for="q3c">7:1</label>
+                            </div>
+                            <button type="button" class="btn btn-sm btn-primary mt-2" onclick="checkAnswer('q3', 'b')">Check Answer</button>
+                        </div>
+                        
+                        <div class="quiz-question">
+                            <h5>Question 4: What HTML element should be used for image alternative text?</h5>
+                            <div class="quiz-option">
+                                <input type="radio" id="q4a" name="q4" value="a">
+                                <label for="q4a"><code>title</code> attribute</label>
+                            </div>
+                            <div class="quiz-option">
+                                <input type="radio" id="q4b" name="q4" value="b">
+                                <label for="q4b"><code>alt</code> attribute</label>
+                            </div>
+                            <div class="quiz-option">
+                                <input type="radio" id="q4c" name="q4" value="c">
+                                <label for="q4c"><code>aria-label</code> attribute</label>
+                            </div>
+                            <button type="button" class="btn btn-sm btn-primary mt-2" onclick="checkAnswer('q4', 'b')">Check Answer</button>
+                        </div>
+                        
+                        <div class="quiz-question">
+                            <h5>Question 5: Why is keyboard accessibility important?</h5>
+                            <div class="quiz-option">
+                                <input type="radio" id="q5a" name="q5" value="a">
+                                <label for="q5a">Some users cannot use a mouse</label>
+                            </div>
+                            <div class="quiz-option">
+                                <input type="radio" id="q5b" name="q5" value="b">
+                                <label for="q5b">Keyboards are faster than mice</label>
+                            </div>
+                            <div class="quiz-option">
+                                <input type="radio" id="q5c" name="q5" value="c">
+                                <label for="q5c">It's not important, only screen readers matter</label>
+                            </div>
+                            <button type="button" class="btn btn-sm btn-primary mt-2" onclick="checkAnswer('q5', 'a')">Check Answer</button>
+                        </div>
+                        
+                    </div>
+                    
+                    <div class="col-lg-4">
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="card-title">Quiz Tips</h5>
+                                <ul class="small">
+                                    <li>Review the basics section before answering</li>
+                                    <li>Think about real-world scenarios</li>
+                                    <li>Remember that accessibility benefits everyone</li>
+                                    <li>Focus on practical implementation</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="card mt-3">
+                            <div class="card-body">
+                                <h5 class="card-title">Thank you for Your Effort to make Software more accessible!</h5>
+                                <p>As a reward, have a silly picture of a snow leopard!</p>
+                                <img src="images/snep_transparent.png" class="img-fluid" alt="A silly picture of a snow leopards sticking out its tongue">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    </main>
+    
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <img src="images/Lotus_transparent.png"  class="float-start me-3 img-fluid" alt="A Purple Lotus drawing" width="103" height="71">
+            <img src="images/Lotus_transparent.png"  class="float-end me-3 img-fluid" alt="A Purple Lotus drawing" width="103" height="71">
+            <p class="mb-2">Jett McHugh PWA Project 2026 A11y Learn - Accessibility Education</p>
+            <p class="small mb-0">This PWA works offline and can be installed on your device for easy access.</p>
+        </div>
+    </footer>
+    
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+    <script src="service-worker.js"></script>
+    <!-- Service Worker Registration -->
+    <script>
+        // Dark mode functionality
+        const lightThemeBtn = document.getElementById('lightTheme');
+        const darkThemeBtn = document.getElementById('darkTheme');
+        const html = document.documentElement;
+        const navbar = document.querySelector('.navbar');
+
+        // Check for saved theme preference
+        const currentTheme = localStorage.getItem('theme') || 'light';
+        setTheme(currentTheme);
+
+        lightThemeBtn.addEventListener('click', (e) => {
+            e.preventDefault();
+            setTheme('light');
+            localStorage.setItem('theme', 'light');
+        });
+
+        darkThemeBtn.addEventListener('click', (e) => {
+            e.preventDefault();
+            setTheme('dark');
+            localStorage.setItem('theme', 'dark');
+        });
+
+        function setTheme(theme) {
+            html.setAttribute('data-bs-theme', theme);
+
+            // Update navbar classes
+            if (theme === 'dark') {
+                navbar.classList.remove('navbar-light', 'bg-light');
+                navbar.classList.add('navbar-dark', 'bg-dark');
+            } else {
+                navbar.classList.remove('navbar-dark', 'bg-dark');
+                navbar.classList.add('navbar-light', 'bg-light');
+            }
+        }
+        //Service worker
+        if ('serviceWorker' in navigator) {
+            navigator.serviceWorker.register('/service-worker.js');
+        }
+        if ('serviceWorker' in navigator) {
+            navigator.serviceWorker.register('service-worker.js').catch(err => {
+                console.log('Service Worker registration failed:', err);
+            });
+        }
+        if (!navigator.serviceWorker.controller) {
+            navigator.serviceWorker.register("/service-worker.js").then(function(reg) {
+                console.log("Service worker has been registered for scope: " + reg.scope);
+        });
+ }
+        
+        // Quiz functionality
+        function checkAnswer(questionName, correctValue) {
+            const selected = document.querySelector(`input[name="${questionName}"]:checked`);
+            const question = document.querySelector(`input[name="${questionName}"]`).closest('.quiz-question');
+            
+            if (!selected) {
+                alert('Please select an answer first!');
+                return;
+            }
+            
+            if (selected.value === correctValue) {
+                alert('✓ Correct! Great job!');
+                question.style.borderLeftColor = 'var(--success-color)';
+            } else {
+                alert('✗ Incorrect. Try again or review the material.');
+                question.style.borderLeftColor = 'var(--danger-color)';
+
+            }
+        }
+    </script>
+</body>
+</html>

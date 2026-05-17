@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A11y Learn Download Page</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="manifest" href="manifest.json">
+    <link rel="icon" type="image/png" href="icon-192x192.png">
+    <link rel="apple-touch-icon" href="icon-192x192.png">
+    <meta name="theme-color" content="#0d6efd">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Skip to main content link for keyboard navigation -->
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+    
+    <!-- Navigation -->
+     <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+            <a class="navbar-brand fw-bold" href="PWAProject_Homepage.html">
+                <span aria-hidden="true">♿</span> A11y Learn
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto">
+                    <!-- CHANGE THESE ITEMS TO PAGES WITHIN THE SITE -->
+                    <li class="nav-item">
+                        <a class="nav-link active" href="../index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../ResumePageHW/Resume.html">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="https://github.com/UnciaCoding?tab=repositories">GitHub</a>
+                    </li>
+                </ul>
+                <!-- Dark Mode Dropdown -->
+                <div class="dropdown">
+                    <button class="btn btn-custom2 dropdown-toggle" type="button" id="themeDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+                        <i class="bi bi-moon-fill"></i> Theme
+                    </button>
+                    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="themeDropdown">
+                        <li><a class="dropdown-item" href="#" id="lightTheme"><i class="bi bi-sun-fill"></i> Light Mode</a></li>
+                        <li><a class="dropdown-item" href="#" id="darkTheme"><i class="bi bi-moon-fill"></i> Dark Mode</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
+    
+    <!-- Header -->
+    <header class="header-section">
+        <div class="container">
+            <img src="../images/Disability_Logo.png" alt="Wheelchair disability logo" class="img-fluid float-end ms-3" width="100">
+            <h1>Welcome to A11y Learn</h1>
+            <p class="mb-0">Master accessibility in software development. Learn how to create inclusive digital experiences for everyone.</p>
+        </div>
+    </header>
+    <div class="card topic-card">
+        <div class="card-header">
+            <h2 class="mb-0">ERROR 404: PAGE NOT FOUND</h2>
+        </div>
+        <div class="card-body">
+            <p>The page you are looking for does not exist or has been moved.</p>
+            <p>Hopefully this will be fixed soon. You can try again later. In the meantime, enjoy a silly snow leopard sticking out its tongue, and you can return to the <a href="https://unciacoding.github.io/CISC3610Portfolio.github.io/index.html">portfolio home page</a></p>
+            <img src="images/snep_transparent.png" class="img-fluid rounded mx-auto d-block" alt="A silly picture of a snow leopards sticking out its tongue" width="512" height="468">
+        </div>
+    </div>
+    <footer>
+        <div class="container">
+            <img src="images/Lotus_transparent.png"  class="float-start me-3 img-fluid" alt="A Purple Lotus drawing" width="103" height="71">
+            <img src="images/Lotus_transparent.png"  class="float-end me-3 img-fluid" alt="A Purple Lotus drawing" width="103" height="71">
+            <p class="mb-2">Jett McHugh PWAProject 2026 A11y Learn - Accessibility Education</p>
+            <p class="small mb-0">This PWA works offline and can be installed on your device for easy access.</p>
+        </div>
+    </footer>
+    
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+    
+    <!-- Service Worker Registration -->
+    <script>
+        // Dark mode functionality
+        const lightThemeBtn = document.getElementById('lightTheme');
+        const darkThemeBtn = document.getElementById('darkTheme');
+        const html = document.documentElement;
+        const navbar = document.querySelector('.navbar');
+
+        // Check for saved theme preference
+        const currentTheme = localStorage.getItem('theme') || 'light';
+        setTheme(currentTheme);
+
+        lightThemeBtn.addEventListener('click', (e) => {
+            e.preventDefault();
+            setTheme('light');
+            localStorage.setItem('theme', 'light');
+        });
+
+        darkThemeBtn.addEventListener('click', (e) => {
+            e.preventDefault();
+            setTheme('dark');
+            localStorage.setItem('theme', 'dark');
+        });
+
+        function setTheme(theme) {
+            html.setAttribute('data-bs-theme', theme);
+
+            // Update navbar classes
+            if (theme === 'dark') {
+                navbar.classList.remove('navbar-light', 'bg-light');
+                navbar.classList.add('navbar-dark', 'bg-dark');
+            } else {
+                navbar.classList.remove('navbar-dark', 'bg-dark');
+                navbar.classList.add('navbar-light', 'bg-light');
+            }
+        }
+        
+        if ('serviceWorker' in navigator) {
+            navigator.serviceWorker.register('service-worker.js').catch(err => {
+                console.log('Service Worker registration failed:', err);
+            });
+        }
+    </script>
+</body>
+</html>
