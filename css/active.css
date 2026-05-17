@@ -1,38 +1,56 @@
-/*Jett McHugh CSS document*/
-body {
-    background:#3D246C;
-    color:#50009c;
+/* Light mode colors */
+[data-bs-theme="light"] {
+    --bs-body-bg: #f8ddff; /* Pale lavender background */
+    --bs-body-color: #000000; /* Black text */
+    --bs-bg-1: #d8bdff;
 }
 
-hr {
-    color: black;
-    height: 2px;
-    border-width: 0;
-    background: black;
-    width: 60%;
-    margin: 0 auto;
+/* Dark mode colors */
+[data-bs-theme="dark"] {
+    --bs-body-bg: #2f1b3d; /* Deep gray-purple background */
+    --bs-body-color: #ffffff; /* White text */
+    --bs-bg-1: #2c2b77;
 }
 
-h1 {
-    font-size: 2em;
-    text-align: center;
+/* Navbar custom colors */
+[data-bs-theme="light"] .navbar-light {
+    background-color: #edc6ff !important; /* Pale lavender for light navbar */
+    --bs-navbar-color: #000000;
+    --bs-navbar-brand-color: #000000;
+    --bs-nav-link-color: #000000;
 }
 
-.box {
-    background:#f3b2e9;
-    color:#5C4B99;
-    width:80%;
-    height: 100%;
-    
-    padding: 10px;
-    margin: auto;
-   
+[data-bs-theme="dark"] .navbar-dark {
+    background-color: #4b0082 !important; /* Deep purple for dark navbar */
+    --bs-navbar-color: #ffffff;
+    --bs-navbar-brand-color: #ffffff;
+    --bs-nav-link-color: #ffffff;
 }
-
-table {
-    border-collapse: collapse;
+.btn-custom1 {
+    --bs-btn-bg: #0090c9; /* Sky blue */
+    --bs-btn-border-color: #0090c9;
+    --bs-btn-color: #000000;
+    --bs-btn-hover-bg: #00668e;
+    --bs-btn-hover-border-color: #00668e;
 }
-
-th, td {
-    border: 1px solid black;
+.btn-custom2 {
+    --bs-btn-bg: #e54fe7; /* Pink*/
+    --bs-btn-border-color: #e54fe7;
+    --bs-btn-color: #000000;
+    --bs-btn-hover-bg: #bc44be;
+    --bs-btn-hover-border-color: #bc44be;
+}
+[data-bs-theme="dark"] .btn-custom1 {
+    --bs-btn-bg: #add8e6; /* Light blue */
+    --bs-btn-border-color: #add8e6;
+    --bs-btn-color: #000000;
+    --bs-btn-hover-bg: #71b8d4;
+    --bs-btn-hover-border-color: #71b8d4;
+}
+[data-bs-theme="dark"] .btn-custom2 {
+    --bs-btn-bg: #f37ff5;
+    --bs-btn-border-color: #f37ff5;
+    --bs-btn-color: #000000;
+    --bs-btn-hover-bg: #fb95fd;
+    --bs-btn-hover-border-color: #fb95fd;
 }
